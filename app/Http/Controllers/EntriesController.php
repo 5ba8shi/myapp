@@ -25,12 +25,6 @@ class EntriesController extends Controller
         return view('entries.menu', ['entries'=>$entries]);
     }
 
-    public function contact() {
-        $entries = Entry::all();
-
-        return view('entries.contact', ['entries'=>$entries]);
-    }
-
     public function view($id) {
         $entry = Entry::findOrFail($id);
 

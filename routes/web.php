@@ -14,5 +14,9 @@
 Route::get('/', 'EntriesController@index');
 Route::get('/news', 'EntriesController@news');
 Route::get('/menu', 'EntriesController@menu');
-Route::get('/contact', 'EntriesController@contact');
+
+Route::get('/contact', 'ContactsController@contact');
+Route::post('/contact/confirm', 'ContactsController@confirm');
+Route::post('/contact/thanks', 'ContactsController@send');
+
 Route::get('/{id}', 'EntriesController@view');
