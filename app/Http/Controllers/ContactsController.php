@@ -9,4 +9,12 @@ class ContactsController extends Controller
     public function contact() {
         return view('contacts.contact');
     }
+
+    public function confirm() {
+        return view('contacts.confirm');
+    }
+
+    public function send() {
+        return view('contacts.send');
+    }
 }
