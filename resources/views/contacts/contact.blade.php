@@ -6,20 +6,30 @@
     @endcomponent
     <div class="wrapper">
       <h2 class="page-title">Contact</h2>
-      <form action="#">
+      <form method="POST" action="{{ route('contacts.confirm') }}">
+      @csrf
         <div>
           <label for="name">お名前</label>
-          <input type="text" id="name" name="your-name">
+          <input id="name" name="name" value="{{ old('name') }}" type="text">
+          @if ($errors->has('name'))
+            <p class="error-message">{{ $errors->first('name') }}</p>
+          @endif
         </div>
 
         <div>
           <label for="email">メールアドレス</label>
-          <input type="email" id="email" name="your-email">
+          <input id="email" name="email" value="{{ old('email') }}" type="text">
+          @if ($errors->has('email'))
+            <p class="error-message">{{ $errors->first('email') }}</p>
+          @endif
         </div>
 
         <div>
           <label for="message">メッセージ</label>
-          <textarea id="message" name="your-message"></textarea>
+          <textarea id="message" name="body">{{ old('body') }}</textarea>
+          @if ($errors->has('body'))
+            <p class="error-message">{{ $errors->first('body') }}</p>
+          @endif
         </div>
 
         <input type="submit" class="button" value="送信">
