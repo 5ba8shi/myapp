@@ -5,7 +5,7 @@
     @component('components.header')
     @endcomponent
     <div class="wrapper">
-      <h2 class="page-title">内容確認画面</h2>
+      <h2 class="page-title">内容確認</h2>
       <form method="POST" action="{{ route('contacts.send') }}">
         @csrf
 

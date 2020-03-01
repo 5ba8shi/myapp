@@ -5,7 +5,7 @@
     @component('components.header')
     @endcomponent
     <div class="wrapper">
-    <h2 class="page-title">送信しました</h2>
+    <h2 class="page-title">{{ __('送信しました') }}</h2>
       <a href="/contact" class="button">戻る</a>
     </div><!-- /.wrapper -->
   </div><!-- /#contact -->

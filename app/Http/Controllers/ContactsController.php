@@ -45,7 +45,7 @@ class ContactsController extends Controller
         //actionの値で分岐
         if($action !== 'submit'){
             return redirect()
-                ->route('contacts.index')
+                ->route('contacts.contact')
                 ->withInput($inputs);
 
         } else {

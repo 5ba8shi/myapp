@@ -32,7 +32,7 @@
           @endif
         </div>
 
-        <input type="submit" class="button" value="送信">
+        <input type="submit" class="button" value="内容を確認する">
       </form>
     </div><!-- /.wrapper -->
   </div><!-- /#contact -->
