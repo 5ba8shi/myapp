@@ -6,7 +6,9 @@
     @endcomponent
     <div class="wrapper">
       <h2 class="page-title">内容確認画面</h2>
-      <form action="#">
+      <form method="POST" action="{{ route('contacts.send') }}">
+        @csrf
+
         <div>
           <label for="name">お名前</label>
           {{ $inputs['name'] }}
@@ -25,7 +27,7 @@
           <input id="message" name="body" value="{{ $inputs['body'] }}" type="hidden">
         </div>
 
-        <button type="submit" class="button" name="action" value="back">
+        <button  class="button" name="action" value="back">
           入力内容修正
         </button>
 
